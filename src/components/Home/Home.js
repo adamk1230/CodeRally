@@ -111,10 +111,10 @@ class Home extends Component {
             <TableBody>
               {
                 projects.map(({
-                  name, description, tech, date,
+                  name, description, tech, createdAt,
                 }) => {
                   const currentDate = new Date();
-                  const projectDate = new Date(date);
+                  const projectDate = new Date(createdAt);
                   const timeDiff = Math.abs(currentDate.getTime() - projectDate.getTime());
                   const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
                   return (
